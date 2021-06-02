@@ -5,14 +5,15 @@ import java.util.Arrays;
 public class Task2 {
     public static void main(String[] args) {
         int[] x = new int[100];
-        int max = 0;
-        int min = 10001;
         int sumWithZeroAtEnd = 0;
         int qtyWithZeroAtEnd = 0;
 
         for (int i = 0; i < 100; i++) {
             x[i] = (int) (10000 * Math.random());
         }
+
+        int max = x[0];
+        int min = x[0];
 
         System.out.println(Arrays.toString(x));
 

@@ -25,8 +25,7 @@ public class Task1 {
             }
             if (x[i] % 2 == 0 && x[i] != 0) {
                 evenNumber++;
-            }
-            if (x[i] % 2 != 0 && x[i] != 0) {
+            } else {
                 oddNumber++;
             }
             sum += x[i];
