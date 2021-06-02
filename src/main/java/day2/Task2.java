@@ -12,8 +12,8 @@ public class Task2 {
         if (a > b) {
             System.out.println("wrong input. second number must be greater then first one");
         } else {
-            for (int i = a; i < b; i++) {
-                if (i % 5 == 0 && i % 10 != 0 && i != a && i != b) {
+            for (int i = a + 1; i < b; i++) {
+                if (i % 5 == 0 && i % 10 != 0 && i != a) {
                     System.out.print(i + " ");
                 }
             }
