@@ -24,16 +24,14 @@ public class Motobike {
     }
 
     void info() {
-        System.out.println("this is " + this.getClass().getName());
+        System.out.println("this is Motobike class");
     }
 
     public int yearDifference(int inputYear) {
         if (inputYear > yearOfIssue) {
             return (inputYear - yearOfIssue);
         } else {
-            System.out.println("input tear is less then year of issue");
-            return 0;
+            throw new ArithmeticException("input year is less then year of issue");
         }
-
     }
 }

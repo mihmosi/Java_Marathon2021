@@ -29,7 +29,15 @@ public class Car {
         this.model = model;
     }
 
-    void info(){
-        System.out.println("this is " + this.getClass().getName());
+    void info() {
+        System.out.println("this is Car class");
+    }
+
+    public int yearDifference(int inputYear) {
+        if (inputYear > yearOfIssue) {
+            return (inputYear - yearOfIssue);
+        } else {
+            throw new ArithmeticException("input year is less then year of issue");
+        }
     }
 }
