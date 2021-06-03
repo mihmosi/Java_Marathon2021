@@ -1,5 +1,6 @@
 package day7;
 /*
+
 2. Дворовый футбол.
 Для игры в футбол во дворе требуется 6 человек (3х3). Класс Игрок (англ. Player) содержит следующие поля:
 Поле “выносливость” (англ. stamina), разное для каждого экземпляра, инициализируется через конструктор.
@@ -26,28 +27,44 @@ info() -  выводит сообщение в зависимости от ко�
 *По желанию: доработать метод info() так, чтобы при выводе в консоль грамматика русского языка учитывалась.
  */
 
-import java.util.Random;
+public class Player {
+    private int stamina;
+    private final int MAX_STAMINA = 100;
+    private final int MIN_STAMINA = 0;
+    private static int countPlayers = 0;
 
-public class Task2 {
-    public static void main(String[] args) {
-
-        Random rnd = new Random();
-        Player player1 = new Player(90 + rnd.nextInt(10));
-        Player player2 = new Player(90 + rnd.nextInt(10));
-        Player player3 = new Player(90 + rnd.nextInt(10));
-        player3.info();//just to chek whats goin' on
-        Player player4 = new Player(90 + rnd.nextInt(10));
-        Player player5 = new Player(90 + rnd.nextInt(10));
-        Player player6 = new Player(90 + rnd.nextInt(10));
-        player6.info();
-        Player playerN = new Player(90 + rnd.nextInt(10));
-        player6.info();//just to check if the quantity of the player is not more then 6
-        System.out.println("we have " + (Player.getCountPlayers()) + " players on the field at the moment");
-        while (player4.getStamina() >= 0) {
-            player4.run();
-        }
-        System.out.println(Player.getCountPlayers());
-        player6.info();
+    public int getStamina() {
+        return stamina;
     }
 
+    public static int getCountPlayers() {
+        return countPlayers;
+    }
+
+    public Player(int stamina) {
+        this.stamina = stamina;
+        countPlayers++;
+        if (countPlayers > 6) {
+            countPlayers -= 1;
+        }
+    }
+
+    public void run() {
+        if (stamina <= 0) {
+            System.out.println("the player is tired. it's time to have a rest");
+            countPlayers -= 1;
+        }
+        stamina -= 1;
+        //     System.out.println(stamina);
+    }
+
+    public void info() {
+        if (countPlayers < 6) {
+            System.out.println("The team is not complete. there are(is) " + (6 - countPlayers) + " free places");
+        } else {
+            System.out.println("no free places on the field");
+        }
+        System.out.println(countPlayers + " players on the field");
+
+    }
 }
