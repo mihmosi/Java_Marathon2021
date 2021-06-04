@@ -30,9 +30,6 @@ public class Teacher {
         String mark;
 
         switch (markNumber) {
-            case 2:
-                mark = "unsatisfied";
-                break;
             case 3:
                 mark = "satisfied";
                 break;
@@ -42,7 +39,8 @@ public class Teacher {
             case 5:
                 mark = "excelent";
                 break;
-            default: mark = "unknown mark";//this will never happened
+            default:
+                mark = "unsatisfied";//this will never happened
         }
         System.out.println("The teacher " + name + " evaluated student " + student.getName() + " with mark " + mark);
     }
