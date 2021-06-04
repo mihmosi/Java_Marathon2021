@@ -34,10 +34,6 @@ public class Car {
     }
 
     public int yearDifference(int inputYear) {
-        if (inputYear > yearOfIssue) {
-            return (inputYear - yearOfIssue);
-        } else {
-            throw new ArithmeticException("input year is less then year of issue");
-        }
+            return Math.abs(yearOfIssue - inputYear);
     }
 }

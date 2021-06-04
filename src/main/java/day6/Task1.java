@@ -7,7 +7,7 @@ public class Task1 {
         car.info();
         Motobike bike = new Motobike(1999, "Red", "Honda V4");
         bike.info();
-        System.out.println("difference " + bike.yearDifference(2021));
+        System.out.println("difference " + bike.yearDifference(1990));
         System.out.println("difference " + car.yearDifference(2011));
     }
 }
