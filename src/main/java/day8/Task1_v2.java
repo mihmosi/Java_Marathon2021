@@ -11,19 +11,19 @@ package day8;
 и использовании StringBuilder, реализуйте описанную задачу этими двумя способами, замеряя время работы программы.
 
  */
-public class Task1 {
+public class Task1_v2 {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        StringBuilder sb = new StringBuilder();
+        String sb = " ";
         for (int i = 0; i <= 20000; i++) {
-            sb.append(i);
-            sb.append(" ");
+            sb = sb + " " + i;
+
         }
         System.out.println(sb);
         long endTime = System.nanoTime();
         long timeElapsed = endTime - startTime;
         System.out.println("Execution time in nanoseconds: " + timeElapsed);
         System.out.println("Execution time in milliseconds: " + timeElapsed / 1000000);
-        //the time of execution 5 ms
+        //the time of execution 135 ms
     }
 }
