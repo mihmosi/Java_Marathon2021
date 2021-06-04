@@ -43,19 +43,19 @@ public class Player {
 
     public Player(int stamina) {
         this.stamina = stamina;
-        countPlayers++;
-        if (countPlayers > 6) {
-            countPlayers -= 1;
+        if (countPlayers >= 6) {
+            countPlayers = 6;
+        } else {
+            countPlayers++;
         }
     }
 
     public void run() {
-        if (stamina <= 0) {
+        if (stamina == 0) {
             System.out.println("the player is tired. it's time to have a rest");
             countPlayers -= 1;
         }
-        stamina -= 1;
-        //     System.out.println(stamina);
+        stamina -= 1; //stamina must reach below zero to finish loop
     }
 
     public void info() {
@@ -64,7 +64,7 @@ public class Player {
         } else {
             System.out.println("no free places on the field");
         }
-        System.out.println(countPlayers + " players on the field");
+
 
     }
 }

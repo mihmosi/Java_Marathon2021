@@ -36,7 +36,7 @@ public class Task2 {
         Player player2 = new Player(90 + rnd.nextInt(10));
         Player player3 = new Player(90 + rnd.nextInt(10));
         player3.info();//just to chek whats goin' on
-        Player player4 = new Player(90 + rnd.nextInt(10));
+        Player player4 = new Player(9 + rnd.nextInt(10));
         Player player5 = new Player(90 + rnd.nextInt(10));
         Player player6 = new Player(90 + rnd.nextInt(10));
         player6.info();
@@ -46,8 +46,8 @@ public class Task2 {
         while (player4.getStamina() >= 0) {
             player4.run();
         }
-        System.out.println(Player.getCountPlayers());
-        player6.info();
+
+        playerN.info();
     }
 
 }
