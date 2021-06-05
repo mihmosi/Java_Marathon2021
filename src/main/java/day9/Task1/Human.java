@@ -26,13 +26,19 @@ package day9.Task1;
 
  */
 
-public class Task1 {
-    public static void main(String[] args) {
-        Student student = new Student("Bill Gates", "Group - 313B");
-        Teacher teacher = new Teacher("Mr. Johnes", "Math");
-        System.out.println(" he is a sudent of " + student.getGroupName() + " group ");
-        System.out.println(("he is a teacher of " + teacher.getSubjName()));
-        student.printInfo();
-        teacher.printInfo();
+public class Human {
+    private String name;
+
+    public Human(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void printInfo() {
+        System.out.println("this is a man wit name" + name);
     }
 }
+
