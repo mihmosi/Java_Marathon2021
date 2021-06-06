@@ -43,9 +43,7 @@ public class Player {
 
     public Player(int stamina) {
         this.stamina = stamina;
-        if (countPlayers >= 6) {
-            countPlayers = 6;
-        } else {
+        if (countPlayers < 6) {
             countPlayers++;
         }
     }
@@ -54,6 +52,7 @@ public class Player {
         if (stamina == 0) {
             System.out.println("the player is tired. it's time to have a rest");
             countPlayers -= 1;
+            return;
         }
         stamina -= 1; //stamina must reach below zero to finish loop
     }

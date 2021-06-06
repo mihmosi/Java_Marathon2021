@@ -14,7 +14,7 @@ public class Teacher extends Human {
 
     @Override
     public void printInfo() {
-        System.out.println("this is a man with name " + super.getName());
         System.out.println("this is a teacher with name " + super.getName());
+        super.printInfo();
     }
 }
