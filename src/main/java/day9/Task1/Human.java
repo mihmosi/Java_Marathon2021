@@ -38,7 +38,7 @@ public class Human {
     }
 
     public void printInfo() {
-        System.out.println("this is a man wit name" + name);
+        System.out.println("this is a man with name  " + name);
     }
 }
 

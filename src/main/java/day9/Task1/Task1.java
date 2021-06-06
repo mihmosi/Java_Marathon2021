@@ -30,7 +30,7 @@ public class Task1 {
     public static void main(String[] args) {
         Student student = new Student("Bill Gates", "Group - 313B");
         Teacher teacher = new Teacher("Mr. Johnes", "Math");
-        System.out.println(" he is a sudent of " + student.getGroupName() + " group ");
+        System.out.println("he is a student of " + student.getGroupName() + " group ");
         System.out.println(("he is a teacher of " + teacher.getSubjName()));
         student.printInfo();
         teacher.printInfo();

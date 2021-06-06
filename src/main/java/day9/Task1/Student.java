@@ -14,8 +14,8 @@ public class Student extends Human {
 
     @Override
     public void printInfo() {
-        System.out.println("this is a man with name " + super.getName());
         System.out.println("this is a student with name " + super.getName());
+        super.printInfo();
     }
 
     public String getGroupName() {
